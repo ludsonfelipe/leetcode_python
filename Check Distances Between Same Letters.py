@@ -18,7 +18,3 @@ def checkDistances(s: str, distance: list[int]) -> bool:
     return True
 
 
-s = "zz"
-distance = [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-
-checkDistances(s, distance)
