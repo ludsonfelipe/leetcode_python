@@ -3,6 +3,4 @@ def isPalindrome(s: str) -> bool:
     for letter in s:
         if not letter.isalnum():
             s = s.replace(letter, '')
-
-    
     return s == s[::-1]
