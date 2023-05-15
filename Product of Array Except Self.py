@@ -1,17 +1,19 @@
-def groupAnagrams(strs: list[str]) -> list[list[str]]:
-    list_of_dicios = []
+# Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
 
-    for word in strs:
-        size_word = len(word)
-        dicio = {}
-        for letter in word:
-            dicio[letter] = word.count(letter)
-        
-        list_of_dicios.append((size_word, dicio))
+# The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
 
-    #for dicio in list_of_dicios:
+# You must write an algorithm that runs in O(n) time and without using the division operation.
 
-    
-    
-    
-#groupAnagrams(["eat","tea","tan","ate","nat","bat"])
+nums = [1, 2, 3, 4]
+# [1, 1, 2, 6]
+# Output: [24,12,8,6]
+lista = []
+value = 1
+for i in nums:
+    lista.append(value)
+    value*=i
+value = 1
+for i in range(len(nums)-1,-1,-1):
+    lista[i]=lista[i]*value
+    value*=nums[i]
+print(lista)
